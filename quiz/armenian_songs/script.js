@@ -308,16 +308,20 @@ let playerContainer = document.querySelector(".playerContainer"),
 
     let wrongAnswers = 0;
 
-let shuffledSongs = songs.sort(() => Math.random() - 0.5),
+let shuffledSongs = shuffle(songs);
     currentIndex = 0;
 
-    function start(){
+function shuffle(array){
+    return array.sort(() => Math.random() - 0.5);
+}
+
+function start(){
         player.src = shuffledSongs[0].src;
         player.play();
     }
 
 function showOptions(){
-    shuffledSongs[currentIndex].options.forEach((option) => {
+    shuffle(shuffledSongs[currentIndex].options).forEach((option) => {
         const button = document.createElement("button");
         button.innerText = option.name;
         if(option.correct){
