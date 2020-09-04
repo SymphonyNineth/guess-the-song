@@ -10,8 +10,6 @@ let songs = [
         ]
     },
 
-    
-
     {
         title: "Dorians - Ես Կուլամ",
         src: "../../audio/armenian_songs/dorians/es_kulam.mp3",
@@ -337,12 +335,18 @@ function eraseData(){
     grid.innerHTML = "";
     next.classList.add("hide");
 }
+function disableButtons(buttons){
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+    }
+}
 function selectAnswer(e){
     let button = e.target;
     if(button.dataset.correct){
         button.classList.add("correct");
         currentIndex ++;
         next.classList.remove("hide");
+        disableButtons(grid.children);
     } else{
         button.classList.add("incorrect");
         wrongAnswers ++;
