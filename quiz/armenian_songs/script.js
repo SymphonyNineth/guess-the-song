@@ -25,13 +25,13 @@ let songs = [
 
     
     {
-        title: "Գռորգի Մինասյան - Սիրո հասակ",
+        title: "Գեորգի Մինասյան - Սիրո հասակ",
         src: "../../audio/armenian_songs/georgi_minasyan/siro_hasak.mp3",
         options: [
             {name: "Լավ Էլի - Գտա քեզ երկնքում", correct: false},
             {name: "Project LA - Ահա նորից գիշեր", correct: false},
             {name: "Project LA - Ով կհանդիպի", correct: false},
-            {name: "Գռորգի Մինասյան - Սիրո հասակ", correct: true}
+            {name: "Գեորգի Մինասյան - Սիրո հասակ", correct: true}
         ]
     },
 
@@ -91,7 +91,7 @@ let songs = [
             {name: "Project LA - Խաղաղ գիշերով", correct: false},
             {name: "The beautified project - Կիլիկիա", correct: false},
             {name: "Project LA - Ահա նորից գիշեր", correct: true},
-            {name: "Գռորգի Մինասյան - Սիրո հասակ", correct: false}
+            {name: "Գեորգի Մինասյան - Սիրո հասակ", correct: false}
         ]
     },
 
@@ -345,12 +345,12 @@ function selectAnswer(e){
     }
 }
 function nextSong(){
-    if(shuffledSongs.length > currentIndex + 1){
+    if(shuffledSongs.length > currentIndex){
         eraseData();
         player.src = shuffledSongs[currentIndex].src;
         showOptions();
     } else {
-
+        finish();
     }
 }
 
