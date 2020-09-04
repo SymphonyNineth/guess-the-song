@@ -25,13 +25,13 @@ let songs = [
 
     
     {
-        title: "Գռորգի Մինասյան - Սիրո հասակ",
+        title: "Գեորգի Մինասյան - Սիրո հասակ",
         src: "../../audio/armenian_songs/georgi_minasyan/siro_hasak.mp3",
         options: [
             {name: "Լավ Էլի - Գտա քեզ երկնքում", correct: false},
             {name: "Project LA - Ահա նորից գիշեր", correct: false},
             {name: "Project LA - Ով կհանդիպի", correct: false},
-            {name: "Գռորգի Մինասյան - Սիրո հասակ", correct: true}
+            {name: "Գեորգի Մինասյան - Սիրո հասակ", correct: true}
         ]
     },
 
@@ -350,7 +350,7 @@ function nextSong(){
         player.src = shuffledSongs[currentIndex].src;
         showOptions();
     } else {
-
+        finish();
     }
 }
 
